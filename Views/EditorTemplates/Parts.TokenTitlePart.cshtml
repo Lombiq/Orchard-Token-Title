@@ -1,0 +1,9 @@
+﻿@model Piedone.TokenTitle.Models.TokenTitlePart
+
+<fieldset>
+    @Html.LabelFor(m => m.TitlePattern, T("Title pattern"))
+    @Html.TextBoxFor(m => m.TitlePattern, new { @class = "large text tokenized" })
+    <span class="hint">@T("You can use tokens.")</span>
+</fieldset>
+
+@Display.TokenHint()
