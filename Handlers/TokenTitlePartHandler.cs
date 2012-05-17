@@ -4,6 +4,7 @@ using Orchard.ContentManagement.Handlers;
 using Orchard.Tokens;
 using Piedone.TokenTitle.Models;
 using Orchard.Data;
+using Orchard.ContentManagement;
 
 namespace Piedone.TokenTitle.Handlers
 {
@@ -22,6 +23,16 @@ namespace Piedone.TokenTitle.Handlers
                             new Dictionary<string, object> { { "Content", context.ContentItem } });
                     });
             });
+        }
+
+        protected override void GetItemMetadata(GetContentItemMetadataContext context)
+        {
+            var part = context.ContentItem.As<TokenTitlePart>();
+
+            if (part != null)
+            {
+                context.Metadata.DisplayText = part.Title;
+            }
         }
     }
 }
