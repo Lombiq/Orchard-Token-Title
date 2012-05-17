@@ -4,10 +4,10 @@ Author: Piedone
 Website: http://orchardtokentitle.codeplex.com
 Version: 0.9
 OrchardVersion: 1.4.1
-Description: Adds token configuration capability to the TitlePart
+Description: Adds token configuration capability for titles
 Features:
     Piedone.TokenTitle:
 		Name: Token Title
-        Description: Adds token configuration capability to the TitlePart
+        Description: Adds token configuration capability for titles
 		Category: Content
 		Dependencies: Title, Orchard.Tokens
