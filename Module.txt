@@ -2,7 +2,7 @@ Name: Token Title
 AntiForgery: enabled
 Author: Piedone
 Website: http://orchardtokentitle.codeplex.com
-Version: 0.9
+Version: 0.9.1
 OrchardVersion: 1.4.1
 Description: Adds token configuration capability for titles
 Features:
