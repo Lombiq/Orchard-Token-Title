@@ -83,7 +83,7 @@
     <Content Include="Placement.info" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\EditorTemplates\Parts.TokenTitlePart.cshtml" />
+    <Content Include="Views\EditorTemplates\Parts.TokenTitle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drivers\TokenTitlePartDriver.cs" />

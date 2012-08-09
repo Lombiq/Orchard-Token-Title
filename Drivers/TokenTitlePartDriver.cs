@@ -28,7 +28,7 @@ namespace Piedone.TokenTitle.Drivers
         {
             return ContentShape("Parts_TokenTitle_Edit",
                 () =>   shapeHelper.EditorTemplate(
-                        TemplateName: "Parts.TokenTitlePart",
+                        TemplateName: "Parts.TokenTitle",
                         Model: part,
                         Prefix: Prefix));
         }
