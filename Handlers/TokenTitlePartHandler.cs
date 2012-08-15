@@ -5,20 +5,21 @@ using Orchard.Tokens;
 using Piedone.TokenTitle.Models;
 using Orchard.Data;
 using Orchard.ContentManagement;
+using Orchard.Environment;
 
 namespace Piedone.TokenTitle.Handlers
 {
     public class TokenTitlePartHandler : ContentHandler
     {
-        public TokenTitlePartHandler(IRepository<TokenTitlePartRecord> repository, Lazy<ITokenizer> tokenizer)
+        public TokenTitlePartHandler(IRepository<TokenTitlePartRecord> repository, Work<ITokenizer> tokenizerWork)
         {
             Filters.Add(StorageFilter.For(repository));
 
-            OnLoaded<TokenTitlePart>((context, part) =>
+            OnActivated<TokenTitlePart>((context, part) =>
             {
                 part.TitleField.Loader(() =>
                     {
-                        return tokenizer.Value.Replace(
+                        return tokenizerWork.Value.Replace(
                             part.TitlePattern,
                             new Dictionary<string, object> { { "Content", context.ContentItem } });
                     });
