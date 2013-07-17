@@ -15,7 +15,7 @@ namespace Piedone.TokenTitle.Models
         }
 
         private readonly LazyField<string> _title = new LazyField<string>();
-        public LazyField<string> TitleField { get { return _title; } }
+        internal LazyField<string> TitleField { get { return _title; } }
         public string Title
         {
             get { return _title.Value; }
