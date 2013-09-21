@@ -15,10 +15,25 @@ namespace Piedone.TokenTitle
                     .Column<string>("TitlePattern", column => column.WithLength(1024))
                 );
 
-            ContentDefinitionManager.AlterPartDefinition("TokenTitlePart", builder => builder.Attachable());
+            ContentDefinitionManager.AlterPartDefinition("TokenTitlePart",
+                part => part
+                    .Attachable()
+                    .WithDescription("Behaves similarly to Title Part but the title can contain tokens that will be evaluated when the item is displayed.")
+                );
 
 
             return 1;
+        }
+
+        public int UpdateFrom1()
+        {
+            ContentDefinitionManager.AlterPartDefinition("TokenTitlePart",
+                part => part
+                    .WithDescription("Behaves similarly to Title Part but the title can contain tokens that will be evaluated when the item is displayed.")
+                );
+
+
+            return 2;
         }
     }
 }
