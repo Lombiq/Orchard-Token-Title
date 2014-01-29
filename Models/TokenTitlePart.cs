@@ -10,8 +10,8 @@ namespace Piedone.TokenTitle.Models
         [Required, StringLength(1024)]
         public string TitlePattern
         {
-            get { return Record.TitlePattern; }
-            set { Record.TitlePattern = value; }
+            get { return Retrieve(x => x.TitlePattern); }
+            set { Store(x => x.TitlePattern, value); }
         }
 
         private readonly LazyField<string> _title = new LazyField<string>();
