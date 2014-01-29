@@ -39,15 +39,5 @@ namespace Piedone.TokenTitle.Drivers
 
             return Editor(part, shapeHelper);
         }
-
-        protected override void Exporting(TokenTitlePart part, ExportContentContext context)
-        {
-            context.Element(part.PartDefinition.Name).SetAttributeValue("TitlePattern", part.TitlePattern);
-        }
-
-        protected override void Importing(TokenTitlePart part, ImportContentContext context)
-        {
-            context.ImportAttribute(part.PartDefinition.Name, "TitlePattern", value => part.TitlePattern = value);
-        }
     }
 }
