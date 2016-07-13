@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Aspects;
-using Orchard.Core.Common.Utilities;
+using Orchard.ContentManagement.Utilities;
 
 namespace Piedone.TokenTitle.Models
 {
